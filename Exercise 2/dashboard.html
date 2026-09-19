@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agent Dashboard - Wina Bwangu FinTech</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-brand">Wina Bwangu FinTech</div>
+    <ul class="nav-links">
+      <li><a href="index.html">New Transaction</a></li>
+      <li><a href="dashboard.html" class="active">Agent Dashboard</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <header class="page-heading">
+      <h1>Agent Dashboard</h1>
+      <p>Monitor income, monthly capital, booth activity, and estimated tax obligations.</p>
+    </header>
+
+    <section class="dashboard-grid" aria-label="Operations dashboard">
+      <article class="metric-card">
+        <span class="metric-label">Total income generated</span>
+        <strong id="totalIncome" class="metric-value">ZMW 0.00</strong>
+      </article>
+      <article class="metric-card">
+        <span class="metric-label">Monthly capital processed</span>
+        <strong id="totalCapital" class="metric-value">ZMW 0.00</strong>
+      </article>
+
+      <section class="dashboard-panel wide">
+        <h2>Service frequency by booth</h2>
+        <p class="panel-note">Successful transactions recorded for each mobile booth.</p>
+        <div id="frequencyContent" class="empty-state">No transactions recorded yet.</div>
+      </section>
+
+      <section class="dashboard-panel">
+        <h2>Transactions by booth</h2>
+        <p class="panel-note">Distribution of successful transactions.</p>
+        <div class="pie-layout">
+          <div id="boothPieChart" class="pie-chart" role="img" aria-label="No transaction data"></div>
+          <div id="pieLegend" class="chart-legend"></div>
+        </div>
+      </section>
+
+      <section class="dashboard-panel">
+        <h2>Tax obligation performance</h2>
+        <p class="panel-note">Estimated at 5% of generated service income.</p>
+        <div id="taxBars" class="bar-list">
+          <div class="empty-state">No tax estimates available yet.</div>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>
